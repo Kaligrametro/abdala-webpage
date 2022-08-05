@@ -1,0 +1,92 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-family: Raleway;
+}
+
+body{
+  width: 100%;
+  height: 100vh;
+}
+
+
+/*------------------------------------------------------------------------------------------*/
+
+
+
+/*------------------------------------------------------------------------------------------*/
+
+.contenedor{
+  width: 100%;
+  max-width: 100%;
+  margin: auto;
+  padding: 0 1.5rem;
+}
+
+.galeriaFotos{
+  display: grid;
+  /*fit content size grid*/
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 1.5rem;
+  justify-items: center;
+  align-items: center;
+}
+
+.galeriaFotos a{
+  width: 100%;
+  height: 25rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.galeriaFotos a ion-icon{
+  color: rgba(255,255,255, .6);
+  font-size: 3rem;
+  position: relative;
+  z-index: 100;
+  padding: 1rem 3rem;
+  border: 2px solid rgba(255,255,255, .6);
+  border-radius: .4rem;
+  opacity: 0;
+  transition: opacity .5s;
+}
+
+.galeriaFotos a::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,.25);
+  opacity: 0;
+  transition: opacity .5s;
+}
+
+.galeriaFotos a:hover ion-icon,
+.galeriaFotos a:hover::before{
+  opacity:1
+}
+
+.img36{
+  grid-area: img36;
+  min-height: 51.5rem;
+  background-image: url("fotos/img36.jpg");
+}
+
+.imgx{
+  grid-area: imgx;
+  background-color: rgba(0,0,0,0);
+}
+
+/*------------------------------------------------------------------------------------------*/
